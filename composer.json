@@ -1,5 +1,5 @@
 {
-    "name": "illuminate/container",
+    "name": "wpwhales/container",
     "description": "The Illuminate Container package.",
     "license": "MIT",
     "homepage": "https://laravel.com",
@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/contracts": "^11.0",
+        "wpwhales/contracts": "dev-master",
         "psr/container": "^1.1.1|^2.0.1"
     },
     "provide": {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Illuminate\\Container\\": ""
+            "WPWhales\\Container\\": ""
         }
     },
     "extra": {

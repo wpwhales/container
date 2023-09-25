@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Container;
+namespace WPWhales\Container;
 
 use Exception;
 use Psr\Container\NotFoundExceptionInterface;

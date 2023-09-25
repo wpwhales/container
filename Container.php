@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Container;
+namespace WPWhales\Container;
 
 use ArrayAccess;
 use Closure;
 use Exception;
-use Illuminate\Contracts\Container\BindingResolutionException;
-use Illuminate\Contracts\Container\CircularDependencyException;
-use Illuminate\Contracts\Container\Container as ContainerContract;
+use WPWhales\Contracts\Container\BindingResolutionException;
+use WPWhales\Contracts\Container\CircularDependencyException;
+use WPWhales\Contracts\Container\Container as ContainerContract;
 use LogicException;
 use ReflectionClass;
 use ReflectionException;
@@ -161,7 +161,7 @@ class Container implements ArrayAccess, ContainerContract
      * Define a contextual binding.
      *
      * @param  array|string  $concrete
-     * @return \Illuminate\Contracts\Container\ContextualBindingBuilder
+     * @return \WPWhales\Contracts\Container\ContextualBindingBuilder
      */
     public function when($concrete)
     {
@@ -702,7 +702,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  array  $parameters
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     public function makeWith($abstract, array $parameters = [])
     {
@@ -716,7 +716,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  array  $parameters
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     public function make($abstract, array $parameters = [])
     {
@@ -749,8 +749,8 @@ class Container implements ArrayAccess, ContainerContract
      * @param  bool  $raiseEvents
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
-     * @throws \Illuminate\Contracts\Container\CircularDependencyException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\CircularDependencyException
      */
     protected function resolve($abstract, $parameters = [], $raiseEvents = true)
     {
@@ -888,8 +888,8 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \Closure|string  $concrete
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
-     * @throws \Illuminate\Contracts\Container\CircularDependencyException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\CircularDependencyException
      */
     public function build($concrete)
     {
@@ -950,7 +950,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter[]  $dependencies
      * @return array
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     protected function resolveDependencies(array $dependencies)
     {
@@ -1023,7 +1023,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter  $parameter
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     protected function resolvePrimitive(ReflectionParameter $parameter)
     {
@@ -1048,7 +1048,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter  $parameter
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     protected function resolveClass(ReflectionParameter $parameter)
     {
@@ -1103,7 +1103,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  string  $concrete
      * @return void
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     protected function notInstantiable($concrete)
     {
@@ -1124,7 +1124,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter  $parameter
      * @return void
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \WPWhales\Contracts\Container\BindingResolutionException
      */
     protected function unresolvablePrimitive(ReflectionParameter $parameter)
     {
@@ -1416,8 +1416,8 @@ class Container implements ArrayAccess, ContainerContract
     /**
      * Set the shared instance of the container.
      *
-     * @param  \Illuminate\Contracts\Container\Container|null  $container
-     * @return \Illuminate\Contracts\Container\Container|static
+     * @param  \WPWhales\Contracts\Container\Container|null  $container
+     * @return \WPWhales\Contracts\Container\Container|static
      */
     public static function setInstance(ContainerContract $container = null)
     {

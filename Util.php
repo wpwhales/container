@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Container;
+namespace WPWhales\Container;
 
 use Closure;
 use ReflectionNamedType;
@@ -13,7 +13,7 @@ class Util
     /**
      * If the given value is not an array and not null, wrap it in one.
      *
-     * From Arr::wrap() in Illuminate\Support.
+     * From Arr::wrap() in WPWhales\Support.
      *
      * @param  mixed  $value
      * @return array
@@ -30,7 +30,7 @@ class Util
     /**
      * Return the default value of the given value.
      *
-     * From global value() helper in Illuminate\Support.
+     * From global value() helper in WPWhales\Support.
      *
      * @param  mixed  $value
      * @param  mixed  ...$args
@@ -44,7 +44,7 @@ class Util
     /**
      * Get the class name of the given parameter's type, if possible.
      *
-     * From Reflector::getParameterClassName() in Illuminate\Support.
+     * From Reflector::getParameterClassName() in WPWhales\Support.
      *
      * @param  \ReflectionParameter  $parameter
      * @return string|null
